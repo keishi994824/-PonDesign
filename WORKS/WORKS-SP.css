@@ -1,0 +1,215 @@
+@media (max-width: 753px){
+  
+  /* ヘッダー
+------------------------------- */
+.header-container{
+  padding: 10px 0;
+}
+
+.header-left h1{
+  font-size: 20px;
+}
+
+/*----------------------------
+* メニュー本体
+*----------------------------*/
+.header-right{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(135deg, #7633a4, #250d65);
+}
+
+.header-right ul{
+  flex-direction: column;
+}
+
+header li a{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  padding: 18px 0;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+a:hover::after {
+  display: none;
+}
+
+.header-right ul li{
+  padding-left: 0;
+}
+
+/*----------------------------
+* アニメーション部分
+*----------------------------*/
+
+/* アニメーション前のメニューの状態 */
+.header-right{
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+/* アニメーション後のメニューの状態 */
+.header-right.is-active{
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/*----------------------------
+* ハンバーガーメニュー
+*----------------------------*/
+
+/* 3本線が×に */
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn{
+	/*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+	position: relative;
+	cursor: pointer;
+  width: 50px;
+  height:50px;
+	border-radius: 4px;
+  z-index: 100;
+}
+
+/*ボタン内側*/
+.openbtn span{
+  display: inline-block;
+  transition: all .2s;/*アニメーションの設定*/
+  position: absolute;
+  left: 12px;
+  height: 1.5px;
+  border-radius: 2px;
+	background: #fff;
+  width: 55%;
+  }
+
+.openbtn span:nth-of-type(1) {
+	top:15px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:23px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:31px;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 12px;
+    transform: translateY(6px) rotate(45deg);
+    width: 55%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;/*真ん中の線は透過*/
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 12px;
+    transform: translateY(-6px) rotate(-45deg);
+    width: 55%;
+}
+
+  /* メインのbg部分
+------------------------------- */
+/* メインのbg部分
+------------------------------- */
+.bg-text{
+  font-weight: bold;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.main-title{
+  font-size: 30px;
+}
+
+/* home-wrapper */
+.home-wrapper{
+  margin-bottom: 40px;
+}
+
+.home-container{
+  display: flex;
+  align-items: center;
+  max-width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 11px;
+}
+
+.home-wrapper .arrow{
+  margin: 0 15px;
+}
+
+
+
+/* works 制作実績 */
+.works-wrapper{
+  margin-bottom: 120px;
+}
+
+.works-container{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.slider{
+  flex-flow: column;
+  text-align: center;
+}
+
+.slider li{
+  width: 100%;
+  padding: 15px 0;
+}
+
+.slider li img{
+  margin-bottom: 10px;
+  border: 1px solid #ececec;
+}
+
+/* contact お問合せ */
+.contact-container{
+  width: 42%;
+}
+
+.contact-wrapper .more-btn{
+  margin-bottom: 60px;
+}
+
+/* footer */
+.footer-container{
+  width: 80%;
+}
+
+}
+
+
+
+/* PC表示 */
+@media (min-width: 753px){
+  .openbtn{
+    display: none;
+  }
+
+  
+  
+  
+}

@@ -1,0 +1,154 @@
+<html lang="ja">  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WORKS-制作実績</title>
+    <link rel="icon" href="../img/faviconV2.jpeg">
+    <!--css-->
+    <link rel="stylesheet" href="WORKS.css">
+    <link rel="stylesheet" href="WORKS-SP.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/042d1ea635.js" crossorigin="anonymous"></script>
+    
+    <!-- スライドショー -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  
+  </head>
+
+  <body>
+    <!--ヘッダー部分-->
+    <header>
+      <div class="header-container">
+        <div class="header-left">
+          <a href="../index.html"><h1>PON DESIGN</h1></a>
+        </div>
+        <div class="header-right">
+          <ul>
+            <li><a href="../NEWS/NEWS.html">NEWS</a></li>
+            <li><a href="../SERVICE/SERVICE.html">SERVICE</a></li>
+            <li><a href="#">WORKS</a></li>
+            <li><a href="../COMPANY/COMPANY.html">COMPANY</a></li>
+            <li><a href="../RECRUIT/RECRUIT.html">RECRUIT</a></li>
+            <li><a href="../CONTACT/CONTACT.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="openbtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!--メイン部分-->
+    <!-- メインビジュアル -->
+    <main>
+      <div class="bg-wrapper">
+        <div class="bg-text">
+          <p class="main-title">WORKS</p>
+          <p class="sub-title">制作実績</p>
+        </div>
+      </div>
+
+      <!-- homeに戻るセクション -->
+      <div class="home-wrapper">
+        <div class="home-container">
+          <a href="../index.html">HOME</a>
+          <P class="arrow">></P>
+          <P>WORKS</P>
+        </div>
+      </div>
+
+      <!-- works 制作実績 -->
+      <div class="works-wrapper">
+        <div class="works-container">
+          <ul class="slider">
+            <li class="slider-item slider-item01">
+              <img src="../img/smoothiesta.jpg" alt="">
+              <a href="#">Smoothesta 様</a>
+            </li>
+            <li class="slider-item slider-item02">
+              <img src="../img/web-conference.jpg" alt="">
+              <a href="#">Web Confrerence 様</a>
+            </li>
+            <li class="slider-item slider-item03">
+              <img src="../img/lamina.jpg" alt="">
+              <a href="#">LAMINA 様</a>
+            </li>
+            <li class="slider-item slider-item04">
+              <img src="../img/citylab.jpg" alt="">
+              <a href="#">CITYLab 様</a>
+            </li>
+            <li class="slider-item slider-item05">
+              <img src="../img/tabilog.jpg" alt="">
+              <a href="#">TABILOG 様</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      
+
+      <!-- contact お問合せ -->
+      <div class="contact-wrapper">
+        <div class="contact-container">
+          <div class="section-title">
+            <h2>CONTACT</h2>
+            <P>お問い合せ</P>
+          </div>
+          <p class="contact-text">Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
+          <button class="more-btn">MORE<i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <ul class="footer-nav">
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../NEWS/NEWS.html">NEWS</a></li>
+          <li><a href="../SERVICE/SERVICE.html">SERVICE</a></li>
+          <li><a href="#">WORKS</a></li>
+          <li><a href="../COMPANY/COMPANY.html">COMPANY</a></li>
+          <li><a href="../RECRUIT/RECRUIT.html">RECRUIT</a></li>
+          <li><a href="../CONTACT/CONTACT.html">CONTACT</a></li>
+        </ul>
+        <p><a href="../index.html">©PON DESIGN</a></p>
+      </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- ヘッダーに色をつける -->
+    <script>
+      jQuery(window).on('scroll', function () {
+      if (jQuery('header').height() < jQuery(this).scrollTop()) { 
+      jQuery('header').addClass('change-color'); }
+      else {
+      jQuery('header').removeClass('change-color'); } });
+    </script>
+    
+    <!-- ハンバーガーメニューの三本線の動き -->
+    <script>
+      $(".openbtn").click(function () {
+      $(this).toggleClass('active');
+      });
+    </script>
+    <!-- ハンバーガーメニューのメニュー表示 -->
+    <script>
+      $(function(){
+      $('.openbtn').on('click', function(){
+      $('.header-right').toggleClass('is-active');
+      });
+      }());
+    </script>
+
+    
+  </body>
+</html>

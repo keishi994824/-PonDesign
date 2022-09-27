@@ -215,7 +215,7 @@ opacity:0;
 
 /* news お知らせ */
 .news-wrapper{
-  margin-bottom: 95px;
+  margin-bottom: 50px;
 }
 
 .news-container{
@@ -225,9 +225,10 @@ opacity:0;
   flex-direction: column;
 }
 
-.section-title{
+.news-wrapper .section-title{
+  margin-bottom: 30px;
+  padding: 0;
   text-align: center;
-  margin-bottom: 35px;
 }
 
 .news{
@@ -237,7 +238,6 @@ opacity:0;
 }
 
 .news .text{
-  display: block;
   flex-flow: column;
   align-items: start;
   margin-bottom: 40px;
@@ -245,7 +245,7 @@ opacity:0;
 
 .date{
   display: flex;
-  padding-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* service 事業内容 */
