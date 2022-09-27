@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+/* 共通 */
+html {
+  font-size: 100%;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+body{
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #161616;
+  transition: 0.3s;
+}
+
+li{
+  list-style: none;
+}
+
+/* ヘッダー
+------------------------------- */
+header{
+  position: fixed;
+  width: 100%;
+  transition: all .5s;
+  z-index: 100;
+}
+
+header.change-color {
+  background-color: #21054D;
+}
+
+.header-container{
+  left: calc((100% - 97%) / 2);/*(全体幅-要素幅)/2が余白*/
+  max-width: 97%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.header-left h1{
+  color: #fff;
+  font-family: Montserrat, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-size: 30px;
+}
+
+header li a{
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  font-family: Montserrat, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+li a:hover::after {
+  transform: scale(1, 1);
+}
+
+.header-right ul{
+  display: flex;
+}
+
+.header-right ul li{
+  padding-left: 25px;
+}
+
+/* メインの背景画像
+------------------------------- */
+.bg-wrapper {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 240px;
+  width: auto;
+}
+
+.bg-text{
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 117px;
+}
+
+.main-title{
+  font-size: 36px;
+}
+
+.sub-title{
+  font-size: 13px;
+}
+
+/* home-wrapper */
+.home-wrapper{
+  background-color: #F0F0F0;
+  height: 42px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.home-container{
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 11px;
+}
+
+.home-wrapper a:hover{
+  border-bottom: 1px solid #333333;
+  transition: none;
+}
+
+.home-wrapper .arrow{
+  margin: 0 15px;
+}
+
+/* news お知らせ */
+.news-wrapper{
+  margin-bottom: 110px;
+}
+
+.news-container{
+  width: 51%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.text{
+  display: flex;
+  align-items: start;
+  margin-bottom: 17px;
+}
+
+.fact{
+  display: block;
+}
+
+.fact a:hover{
+  border-bottom: 1px solid #000;
+  transition: none;
+}
+
+.date{
+  display: flex;
+}
+
+.news-button{
+  background-color: #E8E8E8;
+  border-radius: 15px;
+  text-align: center;
+  width: 80px;
+  height: 25px;
+  margin: 0 20px;
+}
+
+.skip-button{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+button{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.btn1{
+  background-color: #F1EBF8;
+  color: #000;
+}
+
+.btn{
+  background-color: #553189;
+  color: #F0F0F0;
+}
+
+/* contact お問合せ */
+.contact-wrapper{
+  background-color: #F0F0F0;
+}
+
+.contact-container{
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  padding-top: 68px;
+}
+
+.section-title{
+  color: #391D88;
+  font-family: Montserrat, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  margin-bottom: 32px;
+}
+
+.section-title h2{
+  font-size: 38px;
+  letter-spacing: 5;
+}
+
+.section-title p{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.contact-text{
+  padding-bottom: 27px;
+}
+
+.more-btn{
+  margin-bottom: 133px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 220px;
+  height: 55px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  background-image: linear-gradient(to right, #7633a4 0%, #250d65 100%);
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.more-btn:hover{
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #250d65 0%, #7633a4 100%);
+  -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.more-btn i{
+  position: absolute;
+  top: 37%;
+  right: 25px;
+}
+
+/* footer */
+footer{
+  background-color: #110E18;
+}
+
+.footer-container{
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  padding-bottom: 64px;
+}
+
+.footer-nav{
+  width: 100%;
+  display: flex;
+  padding: 66px 0 42px 0;
+  font-family: Montserrat, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;;
+  justify-content: space-between;
+}
+
+.footer-nav a{
+  margin: 0 auto;
+  padding: 0 10px;
+  color: fff;
+  font-size: 12px;
+}
+
+.footer-nav a:hover{
+  opacity: 0.8;
+}
+
+footer p a{
+  font-family: Montserrat, Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;;
+  color: #a798b7;
+  font-size: 10px;
+}
+
+footer p a:hover{
+  color: #5B5266; 
+}
